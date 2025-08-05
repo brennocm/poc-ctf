@@ -1,13 +1,58 @@
 <!doctype html>
 <html>
-<head><title>Login</title></head>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background-color: #2a2a3d;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      width: 300px;
+      text-align: center;
+    }
+    input[type="text"], input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #5a60f5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #3e44e0;
+    }
+    .error {
+      color: #ff6b6b;
+    }
+  </style>
+</head>
 <body>
-  <h2>Login</h2>
-  {% if error %}<p style="color:red">{{ error }}</p>{% endif %}
-  <form method="post">
-    Usuário: <input type="text" name="username"><br>
-    Senha: <input type="password" name="password"><br>
-    <input type="submit" value="Entrar">
-  </form>
+  <div class="login-box">
+    <h2>Login</h2>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    <form method="post">
+      <input type="text" name="username" placeholder="Usuário"><br>
+      <input type="password" name="password" placeholder="Senha"><br>
+      <input type="submit" value="Entrar">
+    </form>
+  </div>
 </body>
 </html>
