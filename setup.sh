@@ -20,8 +20,8 @@ pip install --upgrade pip
 pip install Flask==2.3.2
 
 echo "[5/6] Criando arquivo de flag..."
-echo "FLAG{command_injection_works}" > flag.txt
-chmod 644 flag.txt
+echo "FLAG{command_injection_works}" > /etc/flag.txt
+chmod 644 /etc/flag.txt
 
 echo "[6/6] Iniciando servidor Flask em http://localhost:5000 ..."
 python app.py
