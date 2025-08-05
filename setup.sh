@@ -24,4 +24,5 @@ echo "FLAG{command_injection_works}" | sudo tee /etc/flag.txt > /dev/null
 sudo chmod 644 /etc/flag.txt
 
 echo "[6/6] Iniciando servidor Flask em http://localhost:5000 ..."
-python app.py
+nohup python app.py > flask.log 2>&1 &
+
